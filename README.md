@@ -17,7 +17,7 @@ commands: N/A (type 1 letter at a time)
 
 Reward Alerts (XBOX) [All Point Redemptions]:
 `https://ttvtool.mooo.com/reward?t=OAUTHTOKEN&streamer=USERNAME`
-Replace OAUTHTOKEN with the token given from [This Token Generator](https://twitchapps.com/tokengen/)
+Replace OAUTHTOKEN with the token given from [This Token Generator](https://twitchapps.com/tokengen/) (channel:bot channel:read:redemptions)
 Replace username with your stream username
 ![image](https://github.com/user-attachments/assets/11f9a8f1-35f9-48d9-8a11-08823280a087)
 
