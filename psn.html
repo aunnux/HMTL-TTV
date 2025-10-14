@@ -46,17 +46,17 @@
    ComfyJS.onReward =  (user, reward, cost, message, extra) => {
             const img = document.getElementById("myImage");
             const snd = document.getElementById("mySnd");
-			snd.src = "./psn.mp3";
+			snd.src = "static/psn.mp3";
             img.src = "/static/psn?reward="+reward; // Replace with the new image URL
 	    setTimeout(()=>{
-		img.src = "img.png"; // Replace with the new image URL    
+		img.src = "/static/blank_.html"; // Replace with the new image URL    
 		snd.src = ""; // Replace with the new image URL    
 	    },5000)
         }
         ComfyJS.Init(streamer, token) 
     </script>
-    <img id="myImage" src="img.png" alt="Image" width="300">
-		<audio autoplay id="mySnd" src="psn.mp3" type="audio/mpeg"></audio>
+    <iframe id="myImage" src="/static/blank_.html" alt="Blank" width="300">
+		<audio autoplay id="mySnd" src="static/psn.mp3" type="audio/mpeg"></audio>
     </div>
     <script>
         function changeBackgroundColor(color) {
