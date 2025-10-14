@@ -22,7 +22,7 @@
    ComfyJS.onReward =  (user, reward, cost, message, extra) => {
             const img = document.getElementById("myImage");
             const snd = document.getElementById("mySnd");
-			snd.src = "box.mp3";
+			snd.src = "./box.mp3";
             img.src = "https://www.achievement-maker.com/xbox/"+reward+"?header="+user+"&email=&player=1&ext=.gif"; // Replace with the new image URL
 	    setTimeout(()=>{
 		img.src = "img.png"; // Replace with the new image URL    
@@ -32,9 +32,7 @@
         ComfyJS.Init(streamer, token) 
     </script>
     <img id="myImage" src="img.png" alt="Image" width="300">
-	<audio controls>
-		<source id="mySnd" src="box.mp3" type="audio/mpeg">
-	</audio>
+		<audio autoplay id="mySnd" src="box.mp3" type="audio/mpeg"></audio>
     </div>
     <script>
         function changeBackgroundColor(color) {
