@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: ;
+
+}
+.centered {
+  position: absolute;
+  top: 35%;
+  left: 33%;
+  color: White;
+  font-size:30px;
+  transform: translate(-50%, -50%);
+}
+#chat {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  color: grey;
+  font-size:26px;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+</head>
+<body>
+  <script>
+        function getQueryParam(name) {
+            const regex = new RegExp('[?&]' + name + '=([^&#]*)', 'i');
+            const result = regex.exec(window.location.search);
+            return result ? decodeURIComponent(result[1]) : null;
+        }
+    	window.onload = function() {
+            let chat = document.querySelector("#chat>ul");
+        	return chat.textContent = getQueryParam("reward")
+}
+</script>
+<div class="container">
+  <img src="PSN.png" alt="PSN Achievement" style="width:100%;">
+  <div id="chat">
+  <ul> </ul>
+</div>
+  <div class="centered">Reward Earned:</div>
+</div>
+
+</body>
+</html> 
