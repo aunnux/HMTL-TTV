@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Overlay</title>
+</head>
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: ;
+
+}
+.centered {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  color: White;
+  font-size:30px;
+  transform: translate(-50%, -50%);
+}
+.centered_2 {
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  color: grey;
+  font-size:24px;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+    <script>
+        function getQueryParam(name) {
+            const regex = new RegExp('[?&]' + name + '=([^&#]*)', 'i');
+            const result = regex.exec(window.location.search);
+            return result ? decodeURIComponent(result[1]) : null;
+        }
+
+        var streamer = getQueryParam("streamer")
+	var token = getQueryParam("t")
+        var hex = getQueryParam("hex") || "red"
+
+   ComfyJS.onReward =  (user, reward, cost, message, extra) => {
+            const img = document.getElementById("myImage");
+            const snd = document.getElementById("mySnd");
+			snd.src = "./psn.mp3";
+            img.src = "/static/psn?reward="+reward; // Replace with the new image URL
+	    setTimeout(()=>{
+		img.src = "img.png"; // Replace with the new image URL    
+		snd.src = ""; // Replace with the new image URL    
+	    },5000)
+        }
+        ComfyJS.Init(streamer, token) 
+    </script>
+    <img id="myImage" src="img.png" alt="Image" width="300">
+		<audio autoplay id="mySnd" src="psn.mp3" type="audio/mpeg"></audio>
+    </div>
+    <script>
+        function changeBackgroundColor(color) {
+            document.getElementById("chat").style.color = hex;
+        }
+    </script>
+</body>
+
+</html>
