@@ -9,7 +9,7 @@
 .centered {
   position: absolute;
   top: 35%;
-  left: 33%;
+  left: 34%;
   color: White;
   font-size:5vw;
   transform: translate(-50%, -50%);
@@ -17,8 +17,8 @@
 #chat {
   position: absolute;
   top: 70%;
-  left: 28%;
-  width: 20vw;
+  left: 72%;
+  width: 100%;
   text-align: justify;
   color: grey;
   font-size:4vw;
@@ -35,14 +35,14 @@
             return result ? decodeURIComponent(result[1]) : null;
         }
     	window.onload = function() {
-            let chat = document.querySelector("#chat>ul");
+            let chat = document.querySelector("#chat>b");
         	return chat.textContent = getQueryParam("reward")
 }
 </script>
 <div class="container">
   <img src="https://github.com/Akrasio/HTML/blob/main/static/PSN.png?raw=true" alt="PSN Achievement" style="width:100%;">
   <div id="chat">
-  <ul> </ul>
+  <b></b>
 </div>
   <b><div class="centered">Reward Earned:</div></b>
 </div>
